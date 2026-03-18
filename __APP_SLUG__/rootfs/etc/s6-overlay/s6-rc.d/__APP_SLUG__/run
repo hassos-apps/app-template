@@ -1,0 +1,17 @@
+#!/command/with-contenv bashio
+# shellcheck shell=bash
+# ==============================================================================
+# Home Assistant App: __APP_NAME__
+# Starts __APP_NAME__
+# ==============================================================================
+declare -a options
+
+bashio::log.info "Starting __APP_NAME__..."
+
+# Read configuration
+# value=$(bashio::config 'some_option')
+# options+=(--flag="${value}")
+
+# Use exec to replace shell with the actual process
+# This ensures s6 can properly supervise and signal the process
+exec /usr/bin/__APP_SLUG__ "${options[@]}"

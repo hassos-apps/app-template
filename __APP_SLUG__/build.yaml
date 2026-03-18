@@ -1,0 +1,9 @@
+build_from:
+  amd64: ghcr.io/hassio-addons/base:20.0.1
+  aarch64: ghcr.io/hassio-addons/base:20.0.1
+args: {}
+labels:
+  org.opencontainers.image.title: "__APP_NAME__"
+  org.opencontainers.image.description: "__APP_DESCRIPTION__"
+  org.opencontainers.image.source: "https://github.com/hassos-apps/app-__APP_SLUG__"
+  org.opencontainers.image.licenses: "MIT"

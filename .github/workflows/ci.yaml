@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  ci:
+    permissions:
+      actions: read
+      contents: read
+      packages: read
+      security-events: write
+    uses: hassos-apps/workflows/.github/workflows/app-ci.yaml@main
+    with:
+      addon: "__APP_SLUG__"

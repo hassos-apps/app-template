@@ -1,0 +1,19 @@
+#!/command/with-contenv bashio
+# shellcheck shell=bash
+# ==============================================================================
+# Home Assistant App: __APP_NAME__
+# Configures __APP_NAME__ before running
+# ==============================================================================
+
+bashio::log.info "Initializing __APP_NAME__..."
+
+# Ensure data directory exists
+mkdir -p /data
+
+# Read and apply configuration options
+# Example:
+# if bashio::config.true 'ssl'; then
+#     bashio::log.info "SSL is enabled"
+# fi
+
+bashio::log.info "Initialization complete"

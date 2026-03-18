@@ -1,0 +1,25 @@
+# Home Assistant App configuration
+# Docs: https://developers.home-assistant.io/docs/apps/configuration
+name: "__APP_NAME__"
+version: "1.0.0"
+slug: "__APP_SLUG__"
+description: "__APP_DESCRIPTION__"
+url: "https://github.com/hassos-apps/app-__APP_SLUG__"
+arch:
+  - amd64
+  - aarch64
+image: "ghcr.io/hassos-apps/__APP_SLUG__-{arch}"
+init: false
+startup: application
+boot: auto
+ingress: false
+homeassistant_api: false
+auth_api: false
+map:
+  - type: ssl
+    read_only: true
+backup: hot
+options:
+  log_level: info
+schema:
+  log_level: list(trace|debug|info|notice|warning|error|fatal)?
