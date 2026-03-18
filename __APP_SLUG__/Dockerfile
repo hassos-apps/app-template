@@ -11,7 +11,7 @@ ARG BUILD_ARCH=amd64
 # Install runtime dependencies
 RUN \
     apk add --no-cache \
-        jq=1.7.1-r0
+        jq=1.8.1-r0
 
 # Copy root filesystem
 COPY rootfs /
